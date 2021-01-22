@@ -57,10 +57,9 @@ tabnet_fit <- function(x, ...) {
 #' @export
 #' @rdname tabnet_fit
 tabnet_fit.default <- function(x, ...) {
-  stop(
-    "`tabnet_fit()` is not defined for a '", class(x)[1], "'.",
-    call. = FALSE
-  )
+  stop(domain=NA, gettextf("`tabnet_fit()` is not defined for a '%s'.",
+                           class(x)[1], domain="R-tabnet"),
+       call. = FALSE)
 }
 
 #' @export

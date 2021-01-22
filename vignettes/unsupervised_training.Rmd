@@ -77,7 +77,7 @@ collect_metrics(fit_rs)
 
 ## Back to supervised procedure
 
-We now define our pre-processing steps. Note that tabnet handles categorical variables, so we don't need to do any kind of transformation to them. Normalizing the numeric variables is a good idea though.
+We now are back to the supervised world, and we will conduct the training the same way as in . Note that tabnet handles categorical variables, so we don't need to do any kind of transformation to them. Normalizing the numeric variables is a good idea though.
 
 ```{r}
 rec <- recipe(Class ~ ., train) %>%
