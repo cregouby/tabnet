@@ -113,7 +113,7 @@ In the feature importance plot we can see that, as expected, features
 
 ```{r}
 #| fig.alt: "A variable importance plot of the fitted model on syn2 dataset showing V03 then V06, V04, v10 and V5 as the 5 most important features, in that order."
-vip::vip(fit_syn2)
+vip(fit_syn2)
 ```
 
 Now let's visualize the aggregated-masks plot. In this figure we see
@@ -164,7 +164,7 @@ for `V10`, and the other features that are used conditionally - either
 
 ```{r}
 #| fig.alt: "A variable importance plot of the fitted model on syn4 dataset"
-vip::vip(fit_syn4)
+vip(fit_syn4)
 ```
 
 Now let's visualize the attention masks. Notice that we arranged the

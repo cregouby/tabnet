@@ -181,7 +181,7 @@ autoplot(starw_model)
 
 Then global feature importance gives us a clue of model quality
 ```{r}
-vip::vip(starw_model)
+vip(starw_model)
 ```
 
 ## Model inference

@@ -1,5 +1,10 @@
 # tabnet (development version)
 
+## New features
+
+* import standalone the minimal vip() set of function (#)
+
+
 # tabnet 0.9.0
 
 ## New features

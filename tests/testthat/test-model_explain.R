@@ -109,8 +109,8 @@ test_that("support for vip on tabnet_fit and tabnet_pretrain", {
                     num_shared = 1,
                     num_independent = 1)
 
-  expect_no_error(vip::vip(pretrain))
-  expect_no_error(vip::vip(fit))
+  expect_no_error(vip(pretrain))
+  expect_no_error(vip(fit))
 
 })
 
