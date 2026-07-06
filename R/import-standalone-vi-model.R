@@ -42,8 +42,6 @@
 #'
 #' @rdname vi_model
 #'
-#' @export
-#'
 #' @examples
 #' \dontrun{
 #' # Basic example using imputed titanic data set
@@ -78,7 +76,6 @@ vi_model <- function(object, ...) {
 
 #' @rdname vi_model
 #'
-#' @export
 vi_model.default <- function(object, ...) {
   stop("Model-specific variable importance scores are currently not available ",
        "for this type of model.", call. = FALSE)
@@ -89,7 +86,6 @@ vi_model.default <- function(object, ...) {
 
 #' @rdname vi_model
 #'
-#' @export
 vi_model.model_fit <- function(object, ...) {
   vi_model(parsnip::extract_fit_engine(object), ...)
 }
@@ -98,7 +94,6 @@ vi_model.model_fit <- function(object, ...) {
 
 #' @rdname vi_model
 #'
-#' @export
 vi_model.workflow <- function(object, ...) {
   vi_model(workflows::extract_fit_engine(object), ...)
 }

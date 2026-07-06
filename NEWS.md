@@ -1,6 +1,6 @@
 # tabnet (development version)
 
-## New features
+## Improvements and fixes
 
 * import standalone the minimal vip() set of function (#)
 

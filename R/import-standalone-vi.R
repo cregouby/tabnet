@@ -70,8 +70,6 @@
 #'
 #' @rdname vi
 #'
-#' @export
-#'
 #' @examples
 #' #
 #' # A projection pursuit regression example
@@ -139,7 +137,6 @@ vi <- function(object, ...) {
 
 #' @rdname vi
 #'
-#' @export
 vi.default <- function(
     object,
     method = c("model", "permute"),
@@ -233,8 +230,7 @@ vi.default <- function(
 #' regression or accuracy for binary classification). If `metric` is a
 #' function, then it requires two arguments, `actual` and `predicted`,
 #' and should return a single, numeric value. Ideally, this should be the same
-#' metric that was used to train `object`. See [list_metrics()] for a list of
-#' built-in metrics.
+#' metric that was used to train `object`.
 #'
 #' @param smaller_is_better Logical indicating whether or not a smaller value
 #' of `metric` is better. Default is `NULL`. Must be supplied if
@@ -317,8 +313,6 @@ vi.default <- function(
 #' pages 343-366.
 #'
 #' @rdname vi_permute
-#'
-#' @export
 #'
 #' @examples
 #' \dontrun{
@@ -492,7 +486,6 @@ vi_permute <- function(object, ...) {
 
 #' @rdname vi_permute
 #'
-#' @export
 vi_permute.default <- function(
     object,
     feature_names = NULL,
@@ -807,9 +800,7 @@ get_metric <- function(metric) {
     smaller_is_better <- TRUE
   } else {
     # Return informative error
-    stop("Metric \"", metric, "\" is not supported; use ",
-         "`vip::list_metrics()` to print a list of currently supported ",
-         "metrics. Alternatively, you can pass in a `yardstick` vector ",
+    stop("Metric \"", metric, "\" is not supported. Alternatively, you can pass in a `yardstick` vector ",
          "function directly (e.g., `metric = yardstick::poisson_log_loss_vec` ",
          "(just be sure to also set the `smaller_is_better` argument.",
          call. = FALSE)
